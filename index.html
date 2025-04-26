@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambay Advice Generator</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fef9e7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        color: #d35400;
+      }
+      #advice-box {
+        background: #fff3cd;
+        border: 1px solid #ffeeba;
+        padding: 20px;
+        margin: 20px;
+        font-size: 1.4em;
+        color: #856404;
+        border-radius: 10px;
+        max-width: 500px;
+        text-align: center;
+      }
+      button {
+        background-color: #d35400;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+      }
+      button:hover {
+        background-color: #e67e22;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>✨ Advice Generator ✨</h1>
+    <div id="advice-box">Click the button for wisdom.</div>
+    <button onclick="showAdvice()">Magbigay ng Advice</button>
+
+    <script>
+      const adviceList = [
+        "Kung late ka na, wag ka na magmadali. Late ka na rin lang.",
+        "Kung di mo alam ang sagot, confidence lang.",
+        "Libre mangarap, pero masarap matulog.",
+      ];
+
+      function showAdvice() {
+        const randomAdvice =
+          adviceList[Math.floor(Math.random() * adviceList.length)];
+        document.getElementById("advice-box").innerText = randomAdvice;
+      }
+    </script>
+  </body>
+</html>
